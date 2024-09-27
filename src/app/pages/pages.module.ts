@@ -3,6 +3,9 @@ import { CommonModule } from '@angular/common';
 
 // Modulos
 import { SharedModule } from '../shared/shared.module';
+import { FormsModule } from '@angular/forms';
+import { ComponentsModule } from '../components/components.module';
+
 
 // Componentes
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -29,7 +32,9 @@ import { RouterModule } from '@angular/router';
   imports: [
     CommonModule,
     SharedModule,
-    RouterModule
+    RouterModule,
+    FormsModule,
+    ComponentsModule,
   ]
 })
 export class PagesModule { }
