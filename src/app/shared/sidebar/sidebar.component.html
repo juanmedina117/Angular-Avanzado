@@ -29,8 +29,15 @@
                         </span>
                     </a>
                     <ul aria-expanded="false" class="collapse">
+                        <!-- [routerLinkActiveOptions]="{exact:true}" => Permite que las opciones del menu se activen si esta en su ruta respectiva sin importar por donde pase  -->
                         <li *ngFor="let item of item.subMenu">
-                            <a [routerLink]="item.url">{{ item.titulo }}  </a>
+                            <a 
+                            [routerLink]="item.url"
+                            routerLinkActive="active"
+                            [routerLinkActiveOptions]="{exact:true}" 
+                            >
+                                {{ item.titulo }}  
+                            </a>
                         </li>
                        
                     </ul>
